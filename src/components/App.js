@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WeatherDisplay from "./components/WeatherDisplay";
-import "./styles/App.css"; 
+import "./styles/App.css"; // optional
 
 const App = () => {
   // Hardcoded weather input
