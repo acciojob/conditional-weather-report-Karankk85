@@ -1,20 +1,17 @@
-import React, { useState } from "react";
-import WeatherDisplay from "./components/WeatherDisplay";
-import "./styles/App.css"; // optional
 
+import React from "react";
+import './../styles/App.css';
+import WeatchDisplay from "./WeatherDisplay"
 const App = () => {
-  // Hardcoded weather input
-  const [weather] = useState({
-    temperature: 25,
-    conditions: "Sunny"
-  });
-
+  const [data,setData] = React.useState(null)
+  React.useEffect(()=>{
+  setData({ temperature: 25, conditions: "Sunny" })
+},[])
   return (
     <div>
-      {/* Do not remove the main div */}
-      <WeatherDisplay weather={weather} />
+    {data&&  <WeatchDisplay data={data}/>}
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
